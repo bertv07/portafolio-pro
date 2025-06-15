@@ -995,3 +995,8 @@ p {
         margin-top: 2rem;
     }
 }
+@media (max-width: 400px) {
+    .info-item{
+        font-size: .8rem;
+    }
+}
