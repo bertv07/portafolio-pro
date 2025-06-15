@@ -530,7 +530,7 @@ p {
 
 .info-item {
     background: var(--bg-secondary);
-    padding: 1.25rem;
+    padding: 1rem .5rem ;
     border-radius: 8px;
     transition: all 0.3s ease;
     border: 1px solid var(--border);
@@ -676,6 +676,7 @@ p {
     
     .info-grid {
         grid-template-columns: 1fr;
+        margin-left: -.5rem;
     }
     
     .profile-image {
@@ -973,9 +974,6 @@ p {
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;
-    }
-    nav{
-        justify-content: space-between;
     }
     .cta-buttons {
         flex-direction: column;
