@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gleybert B. Martínez | Full-stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="">
+    <div id="app">
+        <!-- Las páginas se cargarán aquí dinámicamente -->
+    </div>
+    <!-- Navegación -->
+    <nav class="main-nav">
+        <div class="logo">ERT()</div>
+        <div class="nav-links">
+            <a href="#" data-page="home" class="nav-link active">Inicio</a>
+            <a href="#" data-page="about" class="nav-link">Sobre Mí</a>
+            <a href="#" data-page="portfolio" class="nav-link">Proyectos</a>
+            <a href="#" data-page="contact" class="nav-link">Contacto</a>
+        </div>
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Plantilla de Página de Inicio -->
+    <template id="home-page">
+        <section class="page home-page active">
+            <div class="home-container">
+                <div class="hero-content">
+                    <h1>Hola, soy <span class="highlight">Gleybert B. Martínez</span></h1>
+                    <p class="subtitle">Full-stack Developer</p>
+                    <p>Bienvenido a mi portafolio personal. 👋</p>
+                    <div class="cta-buttons">
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="">
+                    <img class="avatar" src="images/avatar.jpeg" alt="">
+                </div>
+            </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Plantilla de Página Sobre Mí -->
+    <template id="about-page">
+        <section class="page about-page">
+            <div class="about-container">
+                <!-- Sección Sobre Mí -->
+                <div class="about-section">
+                    <h2>Sobre Mí</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <div class="about-grid">
+                                <div class="about-info">
+                                    <h3>Desarrollador Full Stack</h3>
+                                    <p>Desarrollador Full-stack con experiencia en la creación de soluciones web modernas y eficientes. Apasionado por el desarrollo de software y siempre en busca de nuevos desafíos.</p>
+                                    <div class="info-grid">
+                                        <div class="info-item">
+                                            <span class="info-label">Nombre:</span>
+                                            <span>Gleybert B. Martínez</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Ubicación:</span>
+                                            <span>Venezuela. Caracas</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Teléfono:</span>
+                                            <span>+58 412-047-4159</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Email:</span>
+                                            <span>gleybertmartinez0702@gmail.com</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">LinkedIn:</span>
+                                            <a href="https://www.linkedin.com/in/gleybert-mart%C3%ADnez-ert/" target="_blank">linkedin.com/in/gleybert</a>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">GitHub:</span>
+                                            <a href="https://github.com/bertv07" target="_blank">github.com/bertv07</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-image">
+                                    <div class="profile-image">
+                                        <img src="images/avatar.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Habilidades -->
+                <div class="skills-section">
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="languages">Lenguajes</button>
+                        <button class="tab-btn" data-tab="frameworks">Frameworks</button>
+                        <button class="tab-btn" data-tab="tools">Herramientas</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="languages">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="frameworks">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-vuejs"></i>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-laravel"></i>
+                                <span>Laravel</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tools">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-terminal"></i>
+                                <span>Terminal</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Plantilla de Página de Portafolio -->
+    <template id="portfolio-page">
+        <section class="page portfolio-page">
+            <h2>Mi Portafolio</h2>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #2d3748;">
+                        <img src="images/250615_16h36m43s_screenshot.png" alt="">
+                    </div>
+                    <h3>Sistema y pagina informativa par aun FBO</h3>
+                    <p>Sistema web desarrollado con React y node.js para la gestión de servicios y pagina informativa para un FBO.</p>
+                    <div class="project-links">
+                        <a href="https://caracas-flight-servicess.netlify.app/" class="btn small">Ver Demo</a>
+                        <a href="https://github.com/bertv07/Caracas-Flight-Services" class="btn small outline">Código</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #4a5568;">
+                        <img src="images/250615_16h39m19s_screenshot.png" alt="Proyecto 2">
+                    </div>
+                    <h3>Mi portafolio</h3>
+                    <p>Mi portafolio personal desarrollado con HTML, CSS y JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://gleybert.github.io/portfolio/" class="btn small">Ver Demo</a>
+                        <a href="https://github.com/gleybert/portfolio" class="btn small outline">Código</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Plantilla de Página de Contacto -->
+    <template id="contact-page">
+        <section class="page contact-page">
+            <h2>Contáctame</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>gleybertmartinez0702@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 412-047-4159</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Venezuela, Caracas</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/bertv07" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/gleybert-martinez-ert" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </template>
+
+    <!-- Footer
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Gleybert B. Martínez. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#" data-page="home">Inicio</a>
+                <a href="#" data-page="about">Sobre Mí</a>
+                <a href="#" data-page="portfolio">Proyectos</a>
+                <a href="#" data-page="contact">Contacto</a>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
