@@ -17,6 +17,7 @@
         <div class="nav-links">
             <a href="#" data-page="home" class="nav-link active">Inicio</a>
             <a href="#" data-page="about" class="nav-link">Sobre Mí</a>
+            <a href="#" data-page="services" class="nav-link">Servicios</a>
             <a href="#" data-page="portfolio" class="nav-link">Proyectos</a>
             <a href="#" data-page="contact" class="nav-link">Contacto</a>
         </div>
@@ -31,19 +32,76 @@
     <!-- Plantilla de Página de Inicio -->
     <template id="home-page">
         <section class="page home-page active">
-            <div class="home-container">
-                <div class="hero-content">
-                    <h1>Hola, soy <span class="highlight">Gleybert B. Martínez</span></h1>
-                    <p class="subtitle">Full-stack Developer</p>
-                    <p>Bienvenido a mi portafolio personal. 👋</p>
-                    <div class="cta-buttons">
+            <!-- Hero Section -->
+             <div class="hero-hero">
+                 <div class="home-container">
+                     <div class="hero-content">
+                         <h1>Hola, soy <span class="highlight">Gleybert B. Martínez</span></h1>
+                         <p class="subtitle">Full-stack Developer</p>
+                         <p class="hero-description">Transformo ideas en experiencias digitales excepcionales con soluciones web modernas y eficientes.</p>
+                         <div class="cta-buttons">
+                             <a href="#contact" class="btn primary">Contáctame</a>
+                             <a href="#portfolio" class="btn secondary">Ver Proyectos</a>
+                         </div>
+                     </div>
+                     <div class="hero-image">
+                         <div class="image-wrapper">
+                             <img class="avatar" src="images/avatar.jpeg" alt="Gleybert B. Martínez">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+            <!-- Featured Services -->
+            <div class="featured-services">
+                <div class="container">
+                    <h2>¿Cómo puedo ayudarte?</h2>
+                    <div class="services-preview">
+                        <div class="service-preview">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Desarrollo Web</h3>
+                            <p>Sitios web rápidos, seguros y optimizados para SEO.</p>
+                        </div>
+                        <div class="service-preview">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Diseño Responsivo</h3>
+                            <p>Experiencias perfectas en todos los dispositivos.</p>
+                        </div>
+                        <div class="service-preview">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Optimización</h3>
+                            <p>Mejora de rendimiento y velocidad de carga.</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="#services" class="btn outline">Ver todos los servicios</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="">
-                    <img class="avatar" src="images/avatar.jpeg" alt="">
+
+            <!-- Featured Projects -->
+            <div class="featured-projects">
+                <div class="container">
+                    <h2>Proyectos Destacados</h2>
+                    <p class="section-subtitle">Algunos de mis trabajos más recientes</p>
+                    <div class="projects-preview">
+                        <div class="project-preview">
+                            <img src="images/250615_16h36m43s_screenshot.png" alt="Proyecto 1">
+                            <h3>Sistema FBO</h3>
+                            <p>Sistema web para gestión de servicios de aviación</p>
+                            <a href="#portfolio" class="btn small">Ver más</a>
+                        </div>
+                        <div class="project-preview">
+                            <img src="images/250615_16h39m19s_screenshot.png" alt="Proyecto 2">
+                            <h3>Portafolio</h3>
+                            <p>Diseño y desarrollo de portafolio personal</p>
+                            <a href="#portfolio" class="btn small">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="#portfolio" class="btn primary">Ver todos los proyectos</a>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
     </template>
@@ -129,6 +187,10 @@
                                 <i class="fas fa-database"></i>
                                 <span>SQL</span>
                             </div>
+                            <div class="skill-card">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -141,6 +203,14 @@
                             <div class="skill-card">
                                 <i class="fab fa-vuejs"></i>
                                 <span>Vue.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-angular"></i>
+                                <span>Angular</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-python"></i>
+                                <span>Django</span>
                             </div>
                             <div class="skill-card">
                                 <i class="fab fa-laravel"></i>
@@ -173,6 +243,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Plantilla de Página de Servicios -->
+    <template id="services-page">
+        <section class="page services-page">
+            <div class="container">
+                <h2>Servicios</h2>
+                <p class="section-subtitle">Ofrezco soluciones web completas y personalizadas para potenciar tu presencia en línea.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Desarrollo Web Full-Stack</h3>
+                        <p>Creación de aplicaciones web completas, tanto en el front-end como en el back-end, adaptadas a las necesidades de tu proyecto.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Diseño Web Responsivo</h3>
+                        <p>Desarrollo de páginas que se adaptan a cualquier dispositivo, garantizando una experiencia óptima para los usuarios.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Integración de Bases de Datos</h3>
+                        <p>Configuración y optimización de bases de datos como MySQL, MongoDB o SQLite para un rendimiento eficiente.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Optimización y Mantenimiento</h3>
+                        <p>Mejora del rendimiento y mantenimiento continuo de sitios y aplicaciones web.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Diseño y Animaciones Interactivas</h3>
+                        <p>Implementación de interfaces modernas y animaciones 3D con React y Three.js.</p>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>¿Listo para comenzar tu proyecto?</h3>
+                    <p>Contáctame para discutir cómo puedo ayudarte a hacer realidad tus ideas.</p>
+                    <a href="#contact" class="btn primary">Contáctame</a>
                 </div>
             </div>
         </section>
@@ -239,21 +363,61 @@
                         </a>
                     </div>
                 </div>
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xldnlbeq" method="POST">
                     <div class="form-group">
+                        <label for="name">Tu Nombre:</label>
                         <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                        <label for="email">Tu Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+                        <label for="message">Tu Mensaje:</label>
+                        <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn primary">Enviar Mensaje</button>
                 </form>
+                <!-- Formspree Floating Button -->
+                <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+                <script>
+                    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+                    formbutton("create", {
+                        action: "https://formspree.io/f/xldnlbeq",
+                        title: "¿En qué puedo ayudarte?",
+                        fields: [
+                            { 
+                                type: "email", 
+                                label: "Email:", 
+                                name: "email",
+                                required: true,
+                                placeholder: "tu@email.com"
+                            },
+                            {
+                                type: "textarea",
+                                label: "Mensaje:",
+                                name: "message",
+                                required: true,
+                                placeholder: "Cuéntame en qué puedo ayudarte"
+                            },
+                            { 
+                                type: "text",
+                                name: "name",
+                                label: "Nombre:",
+                                placeholder: "Tu nombre"
+                            },
+                            { type: "submit" }      
+                        ],
+                        styles: {
+                            title: {
+                                backgroundColor: "var(--primary)"
+                            },
+                            button: {
+                                backgroundColor: "var(--primary)"
+                            }
+                        }
+                    });
+                </script>
             </div>
         </section>
     </template>

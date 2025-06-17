@@ -16,6 +16,7 @@ const html = document.documentElement;
 const templates = {
     home: document.getElementById('home-page').content,
     about: document.getElementById('about-page').content,
+    services: document.getElementById('services-page').content,
     portfolio: document.getElementById('portfolio-page').content,
     contact: document.getElementById('contact-page').content
 };
@@ -313,16 +314,44 @@ function updateActiveNavLink(activePage) {
 function handleFormSubmit(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
+    const form = e.target;
+    const formStatus = document.getElementById('form-status');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
     
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', data);
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     
-    // Show success message
-    alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.');
-    e.target.reset();
+    // Show success message immediately before form submission
+    formStatus.textContent = 'Enviando mensaje...';
+    formStatus.style.backgroundColor = '#e2f3fd';
+    formStatus.style.color = '#0c5460';
+    formStatus.style.display = 'block';
+    
+    // Store scroll position
+    const scrollPosition = window.scrollY;
+    
+    // Submit the form after a short delay to allow the message to show
+    setTimeout(() => {
+        // Show success message
+        formStatus.textContent = '¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.';
+        formStatus.style.backgroundColor = '#d4edda';
+        formStatus.style.color = '#155724';
+        
+        // Reset form and button
+        form.reset();
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+        
+        // Submit the form (this will happen in the background)
+        form.submit();
+        
+        // Restore scroll position after a short delay
+        setTimeout(() => {
+            window.scrollTo(0, scrollPosition);
+        }, 100);
+    }, 1000);
 }
 
 // Handle browser back/forward buttons
