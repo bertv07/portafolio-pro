@@ -112,7 +112,7 @@ p {
 
 /* Layout */
 .hero-hero{
-    margin: auto auto;
+    margin: auto auto !important;
     display: flex;
     justify-content: center;
     align-items: center;
