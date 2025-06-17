@@ -112,10 +112,11 @@ p {
 
 /* Layout */
 .hero-hero{
-    width: 100vw;
+    margin: auto auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
 }
 .container {
     width: 100%;
