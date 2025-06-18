@@ -112,7 +112,6 @@ p {
 
 /* Layout */
 .hero-hero{
-    margin: auto auto !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1310,11 +1309,12 @@ p {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
+    .avatar{
+        margin-top: -5rem;
     }
-
+    .scroll-down{
+        top: 80dvh;
+    }
     .hero-content {
         margin-right: 0;
         margin-bottom: 2rem;
@@ -1413,5 +1413,29 @@ p {
     
     .service-card {
         padding: 1.5rem;
+    }
+}
+@media (max-width: 650px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .scroll-down{
+        top: 70dvh;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 8rem;
+    }
+    .avatar{
+        display: none;
+    }
+    .scroll-down{
+        top: 50dvh;
     }
 }
