@@ -43,6 +43,13 @@
                              <a href="#contact" class="btn primary">Contáctame</a>
                              <a href="#portfolio" class="btn secondary">Ver Proyectos</a>
                          </div>
+                         <div class="scroll-down">
+                             <a href="#featured-services" class="scroll-down-btn">
+                                 <span class="arrow-down">
+                                     <i class="fas fa-chevron-down"></i>
+                                 </span>
+                             </a>
+                         </div>
                      </div>
                      <div class="hero-image">
                          <div class="image-wrapper">
@@ -53,7 +60,7 @@
              </div>
 
             <!-- Featured Services -->
-            <div class="featured-services">
+            <div id="featured-services" class="featured-services">
                 <div class="container">
                     <h2>¿Cómo puedo ayudarte?</h2>
                     <div class="services-preview">
@@ -86,13 +93,19 @@
                     <p class="section-subtitle">Algunos de mis trabajos más recientes</p>
                     <div class="projects-preview">
                         <div class="project-preview">
-                            <img src="images/250615_16h36m43s_screenshot.png" alt="Proyecto 1">
+                            <img src="images/250618_17h18m02s_screenshot.png" alt="Pizza Shop">
+                            <h3>Pizza Palace</h3>
+                            <p>Tienda en línea de pizzas con carrito de compras</p>
+                            <a href="#portfolio" target="_blank" class="btn small">Ver más</a>
+                        </div>
+                        <div class="project-preview">
+                            <img src="images/250615_16h36m43s_screenshot.png" alt="Sistema FBO">
                             <h3>Sistema FBO</h3>
                             <p>Sistema web para gestión de servicios de aviación</p>
                             <a href="#portfolio" class="btn small">Ver más</a>
                         </div>
                         <div class="project-preview">
-                            <img src="images/250615_16h39m19s_screenshot.png" alt="Proyecto 2">
+                            <img src="images/250615_16h39m19s_screenshot.png" alt="Portafolio">
                             <h3>Portafolio</h3>
                             <p>Diseño y desarrollo de portafolio personal</p>
                             <a href="#portfolio" class="btn small">Ver más</a>
@@ -308,8 +321,19 @@
             <h2>Mi Portafolio</h2>
             <div class="portfolio-grid">
                 <div class="project-card">
+                    <div class="project-image" style="background-color: #ff6b6b;">
+                        <img src="./images/250618_17h18m02s_screenshot.png" alt="Pizza Shop">
+                    </div>
+                    <h3>Pizza Palace</h3>
+                    <p>Tienda en línea de pizzas con carrito de compras desarrollada con React y Next.js. Incluye funcionalidades de selección de productos, personalización y pago.</p>
+                    <div class="project-links">
+                        <a href="https://pizza-gamma-virid.vercel.app/" target="_blank" class="btn small">Ver Demo</a>
+                        <a href="#" class="btn small outline">Código</a>
+                    </div>
+                </div>
+                <div class="project-card">
                     <div class="project-image" style="background-color: #2d3748;">
-                        <img src="images/250615_16h36m43s_screenshot.png" alt="">
+                        <img src="images/250615_16h36m43s_screenshot.png" alt="Sistema FBO">
                     </div>
                     <h3>Sistema y pagina informativa para un FBO</h3>
                     <p>Sistema web desarrollado con React y node.js para la gestión de servicios y pagina informativa para un FBO.</p>
@@ -320,7 +344,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image" style="background-color: #4a5568;">
-                        <img src="images/250615_16h39m19s_screenshot.png" alt="Proyecto 2">
+                        <img src="images/250615_16h39m19s_screenshot.png" alt="Portafolio">
                     </div>
                     <h3>Mi portafolio</h3>
                     <p>Mi portafolio personal desarrollado con HTML, CSS y JavaScript.</p>

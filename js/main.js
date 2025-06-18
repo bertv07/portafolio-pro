@@ -410,6 +410,26 @@ function initAnimations() {
     animateOnScroll();
 }
 
+// Smooth scroll function
+function smoothScroll(target) {
+    const targetElement = document.querySelector(target);
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop - 80, // Ajuste para el header fijo
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Smooth scroll for anchor links
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.scroll-down-btn')) {
+        e.preventDefault();
+        const target = e.target.closest('.scroll-down-btn').getAttribute('href');
+        smoothScroll(target);
+    }
+});
+
 // Initialize the app when the DOM is fully loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
