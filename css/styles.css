@@ -988,6 +988,59 @@ p {
     min-height: 150px;
 }
 
+/* Estilos para los enlaces de contacto */
+.contact-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    color: var(--primary);
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+}
+
+.contact-link {
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+.contact-link:hover {
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg);
+}
+
+.social-link:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+    background: var(--card-bg);
+}
+
 /* Footer */
 .footer {
     background-color: var(--bg-secondary);

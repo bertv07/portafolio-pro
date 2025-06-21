@@ -562,9 +562,10 @@ function translatePage(lang) {
         try {
             const key = element.getAttribute('data-translate');
             if (key && langData[key]) {
-                if (element.tagName === 'INPUT') {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                     if (element.placeholder) element.placeholder = langData[key];
-                    if (element.value) element.value = langData[key];
+                    // No actualizamos el value para textarea
+                    if (element.tagName === 'INPUT' && element.value) element.value = langData[key];
                 } else {
                     // Simple innerHTML replacement for most elements
                     element.innerHTML = langData[key];
