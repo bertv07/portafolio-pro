@@ -1,7 +1,188 @@
 // App State
 const state = {
     currentPage: 'home',
-    theme: 'light'
+    theme: 'light',
+    language: 'es' // 'es' para español, 'en' para inglés
+};
+
+// Translations
+const translations = {
+    es: {
+        // Navegación
+        home: 'Inicio',
+        about: 'Sobre Mí',
+        services: 'Servicios',
+        portfolio: 'Proyectos',
+        contact: 'Contacto',
+        // Hero
+        heroTitle: 'Hola, soy <span class="highlight">Gleybert B. Martínez</span>',
+        heroSubtitle: 'Full-stack Developer',
+        heroDescription: 'Transformo ideas en experiencias digitales excepcionales con soluciones web modernas y eficientes.',
+        contactMe: 'Contáctame',
+        viewProjects: 'Ver Proyectos',
+        // Featured Services
+        howCanIHelp: '¿Cómo puedo ayudarte?',
+        webDevelopment: 'Desarrollo Web',
+        webDevDesc: 'Sitios web rápidos, seguros y optimizados para SEO.',
+        responsiveDesign: 'Diseño Responsivo',
+        responsiveDesc: 'Experiencias perfectas en todos los dispositivos.',
+        optimization: 'Optimización',
+        optimizationDesc: 'Mejora de rendimiento y velocidad de carga.',
+        viewAllServices: 'Ver todos los servicios',
+        // Featured Projects
+        featuredProjects: 'Proyectos Destacados',
+        recentWork: 'Algunos de mis trabajos más recientes',
+        viewMore: 'Ver más',
+        project1Title: 'Pizza Palace',
+        project1Desc: 'Tienda en línea de pizzas con carrito de compras',
+        project2Desc1: 'Tienda en línea de pizzas con carrito de compras desarrollada con React y Next.js. Incluye funcionalidades de selección de productos, personalización y pago.',
+        project2Title: 'Sistema FBO',
+        project2Desc2: 'Sistema web desarrollado con React y node.js para la gestión de servicios y pagina informativa para un FBO.',
+        project2Desc: 'Plataforma de gestión para empresas de aviación',
+        project3Title: 'Portafolio',
+        project3Desc: 'Diseño y desarrollo de portafolio personal',
+        project3Desc3: 'Mi portafolio personal desarrollado con HTML, CSS y JavaScript.',
+        // About
+        aboutMe: 'Sobre Mí',
+        aboutDescription: 'Desarrollador Full-stack con experiencia en la creación de soluciones web modernas y eficientes. Apasionado por el desarrollo de software y siempre en busca de nuevos desafíos.',
+        nameLabel: 'Nombre:',
+        nameValue: 'Gleybert B. Martínez',
+        locationLabel: 'Ubicación:',
+        locationValue: 'Venezuela, Caracas',
+        phoneLabel: 'Teléfono:',
+        phoneValue: '+58 412-047-4159',
+        emailLabel: 'Email:',
+        emailValue: 'gleybertmartinez0702@gmail.com',
+        linkedinLabel: 'LinkedIn:',
+        linkedinValue: 'linkedin.com/in/gleybert',
+        githubLabel: 'GitHub:',
+        githubValue: 'github.com/bertv07',
+        // Skills
+        skillsTitle: 'Habilidades Técnicas',
+        languagesTab: 'Lenguajes',
+        frameworksTab: 'Frameworks',
+        toolsTab: 'Herramientas',
+        // Services
+        servicesTitle: 'Servicios',
+        servicesDescription: 'Ofrezco soluciones web completas y personalizadas para potenciar tu presencia en línea.',
+        fullstackTitle: 'Desarrollo Web Full-Stack',
+        fullstackDesc: 'Creación de aplicaciones web completas, tanto en el front-end como en el back-end, adaptadas a las necesidades de tu proyecto.',
+        responsiveTitle: 'Diseño Web Responsivo',
+        responsiveDesc: 'Desarrollo de páginas que se adaptan a cualquier dispositivo, garantizando una experiencia óptima para los usuarios.',
+        databaseTitle: 'Integración de Bases de Datos',
+        databaseDesc: 'Configuración y optimización de bases de datos como MySQL, MongoDB o SQLite para un rendimiento eficiente.',
+        optimizationTitle: 'Optimización y Mantenimiento',
+        optimizationDesc: 'Mejora del rendimiento y mantenimiento continuo de sitios y aplicaciones web.',
+        designTitle: 'Diseño y Animaciones Interactivas',
+        designDesc: 'Implementación de interfaces modernas y animaciones 3D con React y Three.js.',
+        // Portfolio
+        portfolioTitle: 'Mi Portafolio',
+        // Contact Form
+        yourName: 'Tu Nombre:',
+        yourEmail: 'Tu Email:',
+        yourMessage: 'Tu Mensaje:',
+        namePlaceholder: 'Tu Nombre',
+        emailPlaceholder: 'tu@email.com',
+        messagePlaceholder: '¿En qué puedo ayudarte?',
+        sendButton: 'Enviar Mensaje',
+        sendEmail: 'Enviar Email',
+        connectWithMe: 'Conéctate conmigo',
+        viewProfile: 'Ver Perfil',
+        viewMyProjects: 'Mira mis proyectos',
+        viewDemo: 'Ver Demo',
+        viewCode: 'Código',
+        // Contact
+        contactMeTitle: 'Contáctame',
+        contactSubtitle: '¿Tienes un proyecto en mente? Hablemos.'
+    },
+    en: {
+        // Navigation
+        home: 'Home',
+        about: 'About Me',
+        services: 'Services',
+        portfolio: 'Projects',
+        contact: 'Contact',
+        // Hero
+        heroTitle: 'Hi, I\'m <span class="highlight">Gleybert B. Martínez</span>',
+        heroSubtitle: 'Full-stack Developer',
+        heroDescription: 'I turn ideas into exceptional digital experiences with modern and efficient web solutions.',
+        contactMe: 'Contact Me',
+        viewProjects: 'View Projects',
+        // Featured Services
+        howCanIHelp: 'How Can I Help You?',
+        webDevelopment: 'Web Development',
+        webDevDesc: 'Fast, secure, and SEO-optimized websites.',
+        responsiveDesign: 'Responsive Design',
+        responsiveDesc: 'Perfect experiences on all devices.',
+        optimization: 'Optimization',
+        optimizationDesc: 'Performance and loading speed improvement.',
+        viewAllServices: 'View All Services',
+        // Featured Projects
+        featuredProjects: 'Featured Projects',
+        recentWork: 'Some of my most recent work',
+        viewMore: 'View More',
+        project1Title: 'Pizza Palace',
+        project1Desc: 'Online pizza store with shopping cart',
+        project2Desc1: 'Online pizza store with shopping cart developed with React and Next.js. Includes product selection, customization, and payment features.',
+        project2Title: 'FBO System',
+        project2Desc: 'Management platform for aviation companies',
+        project2Desc2: 'Web system developed with React and Node.js for service management and an informative website for an FBO.',
+        project3Title: 'Portfolio',
+        project3Desc: 'Personal portfolio design and development',
+        project3Desc3: 'My personal portfolio developed with HTML, CSS, and JavaScript.',
+        // About
+        aboutMe: 'About Me',
+        aboutDescription: 'Full Stack Developer with experience in creating modern and efficient web solutions. Passionate about software development and always looking for new challenges.',
+        nameLabel: 'Name:',
+        nameValue: 'Gleybert B. Martínez',
+        locationLabel: 'Location:',
+        locationValue: 'Caracas, Venezuela',
+        phoneLabel: 'Phone:',
+        phoneValue: '+58 412-047-4159',
+        emailLabel: 'Email:',
+        emailValue: 'gleybertmartinez0702@gmail.com',
+        linkedinLabel: 'LinkedIn:',
+        linkedinValue: 'linkedin.com/in/gleybert',
+        githubLabel: 'GitHub:',
+        githubValue: 'github.com/bertv07',
+        // Skills
+        skillsTitle: 'Technical Skills',
+        languagesTab: 'Languages',
+        frameworksTab: 'Frameworks',
+        toolsTab: 'Tools',
+        // Services
+        servicesTitle: 'Services',
+        servicesDescription: 'I offer complete and customized web solutions to enhance your online presence.',
+        fullstackTitle: 'Full-Stack Web Development',
+        fullstackDesc: 'Creation of complete web applications, both front-end and back-end, tailored to your project needs.',
+        responsiveTitle: 'Responsive Web Design',
+        responsiveDesc: 'Development of pages that adapt to any device, ensuring an optimal user experience.',
+        databaseTitle: 'Database Integration',
+        databaseDesc: 'Setup and optimization of databases like MySQL, MongoDB, or SQLite for efficient performance.',
+        optimizationTitle: 'Optimization and Maintenance',
+        optimizationDesc: 'Performance improvement and continuous maintenance of websites and web applications.',
+        designTitle: 'Interactive Design and Animations',
+        designDesc: 'Implementation of modern interfaces and 3D animations with React and Three.js.',
+        // Portfolio
+        portfolioTitle: 'My Portfolio',
+        // Contact Form
+        yourName: 'Your Name:',
+        yourEmail: 'Your Email:',
+        yourMessage: 'Your Message:',
+        namePlaceholder: 'Your Name',
+        emailPlaceholder: 'your@email.com',
+        messagePlaceholder: 'How can I help you?',
+        sendButton: 'Send Message',
+        sendEmail: 'Send Email',
+        connectWithMe: 'Connect with me',
+        viewProfile: 'View Profile',
+        viewMyProjects: 'View My Projects',
+        viewDemo: 'View Demo',
+        viewCode: 'Code',
+        // Contact
+        contactMeTitle: 'Contact Me',
+        contactSubtitle: 'Have a project in mind? Let\'s talk.'
+    }
 };
 
 // DOM Elements
@@ -27,12 +208,19 @@ function init() {
     
     // Load saved theme or use system preference
     const savedTheme = localStorage.getItem('theme');
+    const savedLanguage = localStorage.getItem('language');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
     if (savedTheme) {
         setTheme(savedTheme);
     } else {
         setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+    }
+    
+    // Set language
+    if (savedLanguage) {
+        state.language = savedLanguage;
+        updateLanguageToggle(savedLanguage);
     }
     
     // Add event listeners
@@ -57,6 +245,9 @@ function init() {
     
     // Update active nav link
     updateActiveNavLink(initialPage);
+    
+    // Translate the page
+    translatePage(state.language);
 }
 
 // Set up event listeners
@@ -84,6 +275,12 @@ function setupEventListeners() {
     // Theme toggle
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // Language toggle
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', toggleLanguage);
     }
     
     // Close mobile menu when clicking outside
@@ -138,13 +335,16 @@ function navigateTo(page) {
     });
     
     // Update URL with history state
-    window.history.pushState({ page }, '', `#${page}`);
+    window.history.pushState({ page, language: state.language }, '', `#${page}`);
     
     // Update current page in state
     state.currentPage = page;
     
     // Render new page
     renderPage(page);
+    
+    // Ensure translations are applied
+    translatePage(state.language);
 }
 
 // Render page content
@@ -156,73 +356,74 @@ function renderPage(page) {
         return;
     }
     
-    try {
-        // Create a deep clone of the template content
-        const templateContent = templates[page].cloneNode(true);
-        const pageElement = templateContent.querySelector('.page');
-        
-        if (!pageElement) {
-            console.error('Page element not found in template:', page);
-            return;
-        }
-        
-        console.log('Page element found:', pageElement);
-        
-        // Don't fade out for initial page load
-        const isInitialLoad = app.children.length === 0;
-        
-        if (!isInitialLoad) {
-            // Fade out current content
-            app.style.opacity = 0;
-        }
-        
-        const updateContent = () => {
+    // Don't fade out for initial page load
+    const isInitialLoad = app.children.length === 0;
+    
+    if (!isInitialLoad) {
+        // Fade out current content
+        app.style.opacity = '0';
+    }
+    
+    // Small delay to allow CSS transitions to work
+    const renderDelay = isInitialLoad ? 0 : 300;
+    
+    setTimeout(() => {
+        try {
             // Clear the app container
             app.innerHTML = '';
+            
+            // Create a fresh clone of the template content
+            const templateContent = templates[page].cloneNode(true);
             
             // Add the new page content
             app.appendChild(templateContent);
             
             // Make sure the page is visible
             const newPageElement = document.querySelector('.page');
-            if (newPageElement) {
-                newPageElement.style.display = 'block';
-                
-                // Add active class to the new page
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                newPageElement.classList.add('active');
-                
-                // Set initial opacity
-                if (isInitialLoad) {
-                    newPageElement.style.opacity = '1';
-                    app.style.opacity = '1';
-                } else {
-                    newPageElement.style.opacity = '0';
-                    // Fade in
-                    setTimeout(() => {
-                        newPageElement.style.opacity = '1';
-                        app.style.opacity = '1';
-                    }, 10);
-                }
-                
-                console.log('Page content added to DOM');
+            if (!newPageElement) {
+                console.error('Page element not found after rendering:', page);
+                return;
             }
             
-            // Scroll to top of page
-            window.scrollTo(0, 0);
+            newPageElement.style.display = 'block';
             
-            // Initialize page-specific functionality
-            initPage(page);
-        };
-        
-        if (isInitialLoad) {
-            updateContent();
-        } else {
-            setTimeout(updateContent, 200);
+            // Add active class to the new page
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            newPageElement.classList.add('active');
+            
+            // Set initial opacity
+            if (isInitialLoad) {
+                newPageElement.style.opacity = '1';
+                app.style.opacity = '1';
+            } else {
+                newPageElement.style.opacity = '0';
+                // Fade in
+                setTimeout(() => {
+                    newPageElement.style.transition = 'opacity 0.3s ease';
+                    newPageElement.style.opacity = '1';
+                    app.style.opacity = '1';
+                }, 10);
+            }
+            
+            // Apply translations to the new content
+            setTimeout(() => {
+                translatePage(state.language);
+                
+                // Initialize page-specific functionality
+                initPage(page);
+                
+                // Force a reflow to ensure all elements are in the DOM
+                void app.offsetHeight;
+                
+                // Apply translations again to catch any dynamic content
+                setTimeout(() => translatePage(state.language), 50);
+            }, 10);
+            
+        } catch (error) {
+            console.error('Error during page rendering:', error);
+            app.style.opacity = '1';
         }
-    } catch (error) {
-        console.error('Error rendering page:', error);
-    }
+    }, renderDelay);
 }
 
 // Initialize page-specific functionality
@@ -301,13 +502,99 @@ function updateThemeIcon(theme) {
 
 // Update active navigation link
 function updateActiveNavLink(activePage) {
-    document.querySelectorAll('.nav-link').forEach(link => {
+    navLinks.forEach(link => {
         if (link.getAttribute('data-page') === activePage) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
         }
     });
+}
+
+// Toggle language
+function toggleLanguage() {
+    try {
+        const newLang = state.language === 'es' ? 'en' : 'es';
+        console.log('Changing language to:', newLang);
+        
+        // Update state and storage
+        state.language = newLang;
+        localStorage.setItem('language', newLang);
+        
+        // Update URL with current page and new language
+        const currentPage = state.currentPage || 'home';
+        window.history.replaceState(
+            { page: currentPage, language: newLang },
+            '',
+            `#${currentPage}`
+        );
+        
+        // Update UI
+        updateLanguageToggle(newLang);
+        
+        // Force page re-render with new language
+        renderPage(currentPage);
+        
+        console.log('Language changed to:', newLang);
+    } catch (error) {
+        console.error('Error toggling language:', error);
+    }
+}
+
+// Update language toggle button
+function updateLanguageToggle(lang) {
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        const span = languageToggle.querySelector('span');
+        if (span) {
+            span.textContent = lang.toUpperCase();
+        }
+    }
+}
+
+// Translate page content
+function translatePage(lang) {
+    console.log('Translating to:', lang);
+    const langData = translations[lang] || translations['es'];
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        try {
+            const key = element.getAttribute('data-translate');
+            if (key && langData[key]) {
+                if (element.tagName === 'INPUT') {
+                    if (element.placeholder) element.placeholder = langData[key];
+                    if (element.value) element.value = langData[key];
+                } else {
+                    // Simple innerHTML replacement for most elements
+                    element.innerHTML = langData[key];
+                }
+            }
+        } catch (error) {
+            console.error('Error translating element:', element, error);
+        }
+    });
+    
+    // Update page title
+    try {
+        const pageTitle = document.querySelector('title');
+        if (pageTitle) {
+            pageTitle.textContent = lang === 'en' 
+                ? 'Gleybert B. Martínez | Full-stack Developer' 
+                : 'Gleybert B. Martínez | Desarrollador Full-stack';
+        }
+    } catch (error) {
+        console.error('Error updating page title:', error);
+    }
+    
+    // Update language toggle button
+    try {
+        updateLanguageToggle(lang);
+    } catch (error) {
+        console.error('Error updating language toggle:', error);
+    }
+    
+    console.log('Translation complete');
 }
 
 // Handle contact form submission
@@ -358,27 +645,23 @@ function handleFormSubmit(e) {
 window.addEventListener('popstate', (event) => {
     console.log('popstate event:', event);
     
-    // Get the page from the URL hash
-    const page = window.location.hash.replace('#', '') || 'home';
+    const pageFromHash = window.location.hash.replace('#', '');
+    const page = (pageFromHash && templates[pageFromHash]) ? pageFromHash : 'home';
     
-    // Only navigate if it's a different page
+    // Check if we need to update the language
+    if (event.state && event.state.language && event.state.language !== state.language) {
+        state.language = event.state.language;
+        localStorage.setItem('language', state.language);
+    }
+    
     if (page !== state.currentPage) {
-        console.log('Navigating from popstate to:', page);
-        
-        // Update active nav link
-        navLinks.forEach(link => {
-            if (link.getAttribute('data-page') === page) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-        
-        // Update current page in state
         state.currentPage = page;
-        
-        // Render the page
         renderPage(page);
+        updateActiveNavLink(page);
+        // La traducción se aplicará en renderPage
+    } else {
+        // Si solo cambió el idiomo pero no la página
+        translatePage(state.language);
     }
 });
 

@@ -15,18 +15,25 @@
     <nav class="main-nav">
         <div class="logo">ERT()</div>
         <div class="nav-links">
-            <a href="#" data-page="home" class="nav-link active">Inicio</a>
-            <a href="#" data-page="about" class="nav-link">Sobre Mí</a>
-            <a href="#" data-page="services" class="nav-link">Servicios</a>
-            <a href="#" data-page="portfolio" class="nav-link">Proyectos</a>
-            <a href="#" data-page="contact" class="nav-link">Contacto</a>
+            <a href="#" data-page="home" class="nav-link active" data-translate="home">Inicio</a>
+            <a href="#" data-page="about" class="nav-link" data-translate="about">Sobre Mí</a>
+            <a href="#" data-page="services" class="nav-link" data-translate="services">Servicios</a>
+            <a href="#" data-page="portfolio" class="nav-link" data-translate="portfolio">Proyectos</a>
+            <a href="#" data-page="contact" class="nav-link" data-translate="contact">Contacto</a>
         </div>
-        <div class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
+        <div class="de">
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="language-toggle" id="languageToggle" title="Cambiar idioma">
+                <i class="fas fa-globe"></i>
+                <span>ES</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
         </div>
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
     </nav>
 
     <!-- Plantilla de Página de Inicio -->
@@ -36,12 +43,12 @@
              <div class="hero-hero">
                  <div class="home-container">
                      <div class="hero-content">
-                         <h1>Hola, soy <span class="highlight">Gleybert B. Martínez</span></h1>
-                         <p class="subtitle">Full-stack Developer</p>
-                         <p class="hero-description">Transformo ideas en experiencias digitales excepcionales con soluciones web modernas y eficientes.</p>
+                         <h1 data-translate="heroTitle">Hola, soy <span class="highlight">Gleybert B. Martínez</span></h1>
+                         <p class="subtitle" data-translate="heroSubtitle">Full-stack Developer</p>
+                         <p class="hero-description" data-translate="heroDescription">Transformo ideas en experiencias digitales excepcionales con soluciones web modernas y eficientes.</p>
                          <div class="cta-buttons">
-                             <a href="#contact" class="btn primary">Contáctame</a>
-                             <a href="#portfolio" class="btn secondary">Ver Proyectos</a>
+                             <a href="#contact" class="btn primary" data-translate="contactMe">Contáctame</a>
+                             <a href="#portfolio" class="btn secondary" data-translate="viewProjects">Ver Proyectos</a>
                          </div>
                          <div class="scroll-down">
                              <a href="#featured-services" class="scroll-down-btn">
@@ -58,30 +65,30 @@
                      </div>
                  </div>
              </div>
-
+             
             <!-- Featured Services -->
             <div id="featured-services" class="featured-services">
                 <div class="container">
-                    <h2>¿Cómo puedo ayudarte?</h2>
+                    <h2 data-translate="howCanIHelp">¿Cómo puedo ayudarte?</h2>
                     <div class="services-preview">
                         <div class="service-preview">
                             <i class="fas fa-laptop-code"></i>
-                            <h3>Desarrollo Web</h3>
-                            <p>Sitios web rápidos, seguros y optimizados para SEO.</p>
+                            <h3 data-translate="webDevelopment">Desarrollo Web</h3>
+                            <p data-translate="webDevDesc">Sitios web rápidos, seguros y optimizados para SEO.</p>
                         </div>
                         <div class="service-preview">
                             <i class="fas fa-mobile-alt"></i>
-                            <h3>Diseño Responsivo</h3>
-                            <p>Experiencias perfectas en todos los dispositivos.</p>
+                            <h3 data-translate="responsiveDesign">Diseño Responsivo</h3>
+                            <p data-translate="responsiveDesc">Experiencias perfectas en todos los dispositivos.</p>
                         </div>
                         <div class="service-preview">
                             <i class="fas fa-rocket"></i>
-                            <h3>Optimización</h3>
-                            <p>Mejora de rendimiento y velocidad de carga.</p>
+                            <h3 data-translate="optimization">Optimización</h3>
+                            <p data-translate="optimizationDesc">Mejora de rendimiento y velocidad de carga.</p>
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="#services" class="btn outline">Ver todos los servicios</a>
+                        <a href="#services" class="btn outline" data-translate="viewAllServices">Ver todos los servicios</a>
                     </div>
                 </div>
             </div>
@@ -89,26 +96,26 @@
             <!-- Featured Projects -->
             <div class="featured-projects">
                 <div class="container">
-                    <h2>Proyectos Destacados</h2>
-                    <p class="section-subtitle">Algunos de mis trabajos más recientes</p>
+                    <h2 data-translate="featuredProjects">Proyectos Destacados</h2>
+                    <p class="section-subtitle" data-translate="recentWork">Algunos de mis trabajos más recientes</p>
                     <div class="projects-preview">
                         <div class="project-preview">
                             <img src="images/250618_17h18m02s_screenshot.png" alt="Pizza Shop">
-                            <h3>Pizza Palace</h3>
-                            <p>Tienda en línea de pizzas con carrito de compras</p>
-                            <a href="#portfolio" target="_blank" class="btn small">Ver más</a>
+                            <h3 data-translate="project1Title">Pizza Palace</h3>
+                            <p data-translate="project1Desc">Tienda en línea de pizzas con carrito de compras</p>
+                            <a href="#portfolio" target="_blank" class="btn small" data-translate="viewMore">Ver más</a>
                         </div>
                         <div class="project-preview">
                             <img src="images/250615_16h36m43s_screenshot.png" alt="Sistema FBO">
-                            <h3>Sistema FBO</h3>
-                            <p>Sistema web para gestión de servicios de aviación</p>
-                            <a href="#portfolio" class="btn small">Ver más</a>
+                            <h3 data-translate="project2Title">Sistema FBO</h3>
+                            <p data-translate="project2Desc">Plataforma de gestión para empresas de aviación</p>
+                            <a href="#portfolio" target="_blank" class="btn small" data-translate="viewMore">Ver más</a>
                         </div>
                         <div class="project-preview">
                             <img src="images/250615_16h39m19s_screenshot.png" alt="Portafolio">
-                            <h3>Portafolio</h3>
-                            <p>Diseño y desarrollo de portafolio personal</p>
-                            <a href="#portfolio" class="btn small">Ver más</a>
+                            <h3 data-translate="project3Title">Portafolio</h3>
+                            <p data-translate="project3Desc">Diseño y desarrollo de portafolio personal</p>
+                            <a href="#portfolio" target="_blank" class="btn small" data-translate="viewMore">Ver más</a>
                         </div>
                     </div>
                     <div class="text-center">
@@ -125,37 +132,37 @@
             <div class="about-container">
                 <!-- Sección Sobre Mí -->
                 <div class="about-section">
-                    <h2>Sobre Mí</h2>
+                    <h2 data-translate="aboutMe">Sobre Mí</h2>
                     <div class="about-content">
                         <div class="about-text">
                             <div class="about-grid">
                                 <div class="about-info">
                                     <h3>Desarrollador Full Stack</h3>
-                                    <p>Desarrollador Full-stack con experiencia en la creación de soluciones web modernas y eficientes. Apasionado por el desarrollo de software y siempre en busca de nuevos desafíos.</p>
+                                    <p data-translate="aboutDescription">Desarrollador Full-stack con experiencia en la creación de soluciones web modernas y eficientes. Apasionado por el desarrollo de software y siempre en busca de nuevos desafíos.</p>
                                     <div class="info-grid">
                                         <div class="info-item">
-                                            <span class="info-label">Nombre:</span>
-                                            <span>Gleybert B. Martínez</span>
+                                            <span class="info-label" data-translate="nameLabel">Nombre:</span>
+                                            <span data-translate="nameValue">Gleybert B. Martínez</span>
                                         </div>
                                         <div class="info-item">
-                                            <span class="info-label">Ubicación:</span>
-                                            <span>Venezuela. Caracas</span>
+                                            <span class="info-label" data-translate="locationLabel">Ubicación:</span>
+                                            <span data-translate="locationValue">Venezuela, Caracas</span>
                                         </div>
                                         <div class="info-item">
-                                            <span class="info-label">Teléfono:</span>
-                                            <span>+58 412-047-4159</span>
+                                            <span class="info-label" data-translate="phoneLabel">Teléfono:</span>
+                                            <span data-translate="phoneValue">+58 412-047-4159</span>
                                         </div>
                                         <div class="info-item">
-                                            <span class="info-label">Email:</span>
-                                            <span>gleybertmartinez0702@gmail.com</span>
+                                            <span class="info-label" data-translate="emailLabel">Email:</span>
+                                            <span data-translate="emailValue">gleybertmartinez0702@gmail.com</span>
                                         </div>
                                         <div class="info-item">
-                                            <span class="info-label">LinkedIn:</span>
-                                            <a href="https://www.linkedin.com/in/gleybert-mart%C3%ADnez-ert/" target="_blank">linkedin.com/in/gleybert</a>
+                                            <span class="info-label" data-translate="linkedinLabel">LinkedIn:</span>
+                                            <a href="https://www.linkedin.com/in/gleybert-mart%C3%ADnez-ert/" target="_blank" data-translate="linkedinValue">linkedin.com/in/gleybert</a>
                                         </div>
                                         <div class="info-item">
-                                            <span class="info-label">GitHub:</span>
-                                            <a href="https://github.com/bertv07" target="_blank">github.com/bertv07</a>
+                                            <span class="info-label" data-translate="githubLabel">GitHub:</span>
+                                            <a href="https://github.com/bertv07" target="_blank" data-translate="githubValue">github.com/bertv07</a>
                                         </div>
                                     </div>
                                 </div>
@@ -171,11 +178,11 @@
 
                 <!-- Sección Habilidades -->
                 <div class="skills-section">
-                    <h2>Habilidades Técnicas</h2>
+                    <h2 data-translate="skillsTitle">Habilidades Técnicas</h2>
                     <div class="tabs">
-                        <button class="tab-btn active" data-tab="languages">Lenguajes</button>
-                        <button class="tab-btn" data-tab="frameworks">Frameworks</button>
-                        <button class="tab-btn" data-tab="tools">Herramientas</button>
+                        <button class="tab-btn active" data-tab="languages" data-translate="languagesTab">Lenguajes</button>
+                        <button class="tab-btn" data-tab="frameworks" data-translate="frameworksTab">Frameworks</button>
+                        <button class="tab-btn" data-tab="tools" data-translate="toolsTab">Herramientas</button>
                     </div>
                     
                     <div class="tab-content active" id="languages">
@@ -265,51 +272,49 @@
     <template id="services-page">
         <section class="page services-page">
             <div class="container">
-                <h2>Servicios</h2>
-                <p class="section-subtitle">Ofrezco soluciones web completas y personalizadas para potenciar tu presencia en línea.</p>
+                <h2 data-translate="servicesTitle">Servicios</h2>
+                <p class="section-subtitle" data-translate="servicesDescription">Ofrezco soluciones web completas y personalizadas para potenciar tu presencia en línea.</p>
                 
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-laptop-code"></i>
                         </div>
-                        <h3>Desarrollo Web Full-Stack</h3>
-                        <p>Creación de aplicaciones web completas, tanto en el front-end como en el back-end, adaptadas a las necesidades de tu proyecto.</p>
+                        <h3 data-translate="fullstackTitle">Desarrollo Web Full-Stack</h3>
+                        <p data-translate="fullstackDesc">Creación de aplicaciones web completas, tanto en el front-end como en el back-end, adaptadas a las necesidades de tu proyecto.</p>
                     </div>
+                    
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-laptop"></i>
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3>Diseño Web Responsivo</h3>
-                        <p>Desarrollo de páginas que se adaptan a cualquier dispositivo, garantizando una experiencia óptima para los usuarios.</p>
+                        <h3 data-translate="responsiveTitle">Diseño Web Responsivo</h3>
+                        <p data-translate="responsiveDesc">Desarrollo de páginas que se adaptan a cualquier dispositivo, garantizando una experiencia óptima para los usuarios.</p>
                     </div>
+                    
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-database"></i>
                         </div>
-                        <h3>Integración de Bases de Datos</h3>
-                        <p>Configuración y optimización de bases de datos como MySQL, MongoDB o SQLite para un rendimiento eficiente.</p>
+                        <h3 data-translate="databaseTitle">Integración de Bases de Datos</h3>
+                        <p data-translate="databaseDesc">Configuración y optimización de bases de datos como MySQL, MongoDB o SQLite para un rendimiento eficiente.</p>
                     </div>
+                    
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-tools"></i>
+                            <i class="fas fa-tachometer-alt"></i>
                         </div>
-                        <h3>Optimización y Mantenimiento</h3>
-                        <p>Mejora del rendimiento y mantenimiento continuo de sitios y aplicaciones web.</p>
+                        <h3 data-translate="optimizationTitle">Optimización y Mantenimiento</h3>
+                        <p data-translate="optimizationDesc">Mejora del rendimiento y mantenimiento continuo de sitios y aplicaciones web.</p>
                     </div>
+                    
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-cube"></i>
+                            <i class="fas fa-paint-brush"></i>
                         </div>
-                        <h3>Diseño y Animaciones Interactivas</h3>
-                        <p>Implementación de interfaces modernas y animaciones 3D con React y Three.js.</p>
+                        <h3 data-translate="designTitle">Diseño y Animaciones Interactivas</h3>
+                        <p data-translate="designDesc">Implementación de interfaces modernas y animaciones 3D con React y Three.js.</p>
                     </div>
-                </div>
-
-                <div class="cta-section">
-                    <h3>¿Listo para comenzar tu proyecto?</h3>
-                    <p>Contáctame para discutir cómo puedo ayudarte a hacer realidad tus ideas.</p>
-                    <a href="#contact" class="btn primary">Contáctame</a>
                 </div>
             </div>
         </section>
@@ -318,39 +323,41 @@
     <!-- Plantilla de Página de Portafolio -->
     <template id="portfolio-page">
         <section class="page portfolio-page">
-            <h2>Mi Portafolio</h2>
+            <h2 data-translate="portfolioTitle">Mi Portafolio</h2>
             <div class="portfolio-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background-color: #ff6b6b;">
-                        <img src="./images/250618_17h18m02s_screenshot.png" alt="Pizza Shop">
-                    </div>
-                    <h3>Pizza Palace</h3>
-                    <p>Tienda en línea de pizzas con carrito de compras desarrollada con React y Next.js. Incluye funcionalidades de selección de productos, personalización y pago.</p>
-                    <div class="project-links">
-                        <a href="https://pizza-gamma-virid.vercel.app/" target="_blank" class="btn small">Ver Demo</a>
-                        <a href="#" class="btn small outline">Código</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-color: #2d3748;">
-                        <img src="images/250615_16h36m43s_screenshot.png" alt="Sistema FBO">
-                    </div>
-                    <h3>Sistema y pagina informativa para un FBO</h3>
-                    <p>Sistema web desarrollado con React y node.js para la gestión de servicios y pagina informativa para un FBO.</p>
-                    <div class="project-links">
-                        <a href="https://caracas-flight-servicess.netlify.app/" class="btn small">Ver Demo</a>
-                        <a href="https://github.com/bertv07/Caracas-Flight-Services" class="btn small outline">Código</a>
+                    <img src="images/250618_17h18m02s_screenshot.png" alt="Pizza Shop">
+                    <div class="project-info">
+                        <h3 data-translate="project1Title">Pizza Palace</h3>
+                        <p data-translate="project2Desc1">Tienda en línea de pizzas con carrito de compras desarrollada con React y Next.js. Incluye funcionalidades de selección de productos, personalización y pago.</p>
+                        <div class="project-links">
+                            <a href="https://pizza-gamma-virid.vercel.app/" class="btn small" target="_blank" data-translate="viewDemo">Ver Demo</a>
+                            <a href="#" class="btn outline small" target="_blank" data-translate="viewCode">Código</a>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <div class="project-image" style="background-color: #4a5568;">
-                        <img src="images/250615_16h39m19s_screenshot.png" alt="Portafolio">
+                    <img src="images/250615_16h36m43s_screenshot.png" alt="Sistema FBO">
+                    <div class="project-info">
+                        <h3 data-translate="project2Title">Sistema FBO</h3>
+                        <p data-translate="project2Desc2">Sistema web desarrollado con React y node.js para la gestión de servicios y pagina informativa para un FBO.</p>
+                        <div class="project-links">
+                            <a href="https://caracas-flight-servicess.netlify.app/" class="btn small" target="_blank" data-translate="viewDemo">Ver Demo</a>
+                            <a href="https://github.com/bertv07/Caracas-Flight-Services" class="btn outline small" target="_blank" data-translate="viewCode">Código</a>
+                        </div>
                     </div>
-                    <h3>Mi portafolio</h3>
-                    <p>Mi portafolio personal desarrollado con HTML, CSS y JavaScript.</p>
-                    <div class="project-links">
-                        <a href="https://gleybert.github.io/portfolio/" class="btn small">Ver Demo</a>
-                        <a href="https://github.com/gleybert/portfolio" class="btn small outline">Código</a>
+                </div>
+                
+                <div class="project-card">
+                    <img src="images/250615_16h39m19s_screenshot.png" alt="Portafolio">
+                    <div class="project-info">
+                        <h3 data-translate="project3Title">Portafolio</h3>
+                        <p data-translate="project3Desc3">Mi portafolio personal desarrollado con HTML, CSS y JavaScript.</p>
+                        <div class="project-links">
+                            <a href="https://gleybert.github.io/portfolio/" class="btn small" target="_blank" data-translate="viewDemo">Ver Demo</a>
+                            <a href="https://github.com/gleybert/portfolio" class="btn outline small" target="_blank" data-translate="viewCode">Código</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -360,7 +367,8 @@
     <!-- Plantilla de Página de Contacto -->
     <template id="contact-page">
         <section class="page contact-page">
-            <h2>Contáctame</h2>
+            <h2 data-translate="contactMeTitle">Contact Me</h2>
+            <p class="section-subtitle" data-translate="contactSubtitle">Have a project in mind? Let's talk.</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -389,57 +397,64 @@
                 </div>
                 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xldnlbeq" method="POST">
                     <div class="form-group">
-                        <label for="name">Tu Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                        <label for="name" data-translate="yourName">Your Name:</label>
+                        <input type="text" id="name" name="name" data-translate="namePlaceholder" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Tu Email:</label>
-                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        <label for="email" data-translate="yourEmail">Your Email:</label>
+                        <input type="email" id="email" name="email" data-translate="emailPlaceholder" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Tu Mensaje:</label>
-                        <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" rows="5" required></textarea>
+                        <label for="message" data-translate="yourMessage">Your Message:</label>
+                        <textarea id="message" name="message" data-translate="messagePlaceholder" placeholder="How can I help you?" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn primary">Enviar Mensaje</button>
+                    <button type="submit" class="btn primary" data-translate="sendButton">Send Message</button>
                 </form>
                 <!-- Formspree Floating Button -->
                 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
                 <script>
-                    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-                    formbutton("create", {
-                        action: "https://formspree.io/f/xldnlbeq",
-                        title: "¿En qué puedo ayudarte?",
-                        fields: [
-                            { 
-                                type: "email", 
-                                label: "Email:", 
-                                name: "email",
-                                required: true,
-                                placeholder: "tu@email.com"
+                    document.addEventListener('DOMContentLoaded', function() {
+                        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+                        formbutton("create", {
+                            action: "https://formspree.io/f/xldnlbeq",
+                            title: "How can I help you?",
+                            fields: [
+                                { 
+                                    type: "email", 
+                                    label: "Email:", 
+                                    name: "email",
+                                    required: true,
+                                    placeholder: "your@email.com"
+                                },
+                                {
+                                    type: "textarea",
+                                    label: "Message:",
+                                    name: "message",
+                                    required: true,
+                                    placeholder: "How can I help you?"
+                                },
+                                { 
+                                    type: "text", 
+                                    name: "name", 
+                                    label: "Name:", 
+                                    placeholder: "Your name" 
+                                },
+                                { 
+                                    type: "submit",
+                                    value: "Send"
+                                }
+                            ],
+                            styles: {
+                                title: {
+                                    backgroundColor: "#4f46e5"
+                                },
+                                button: {
+                                    backgroundColor: "#4f46e5"
+                                }
                             },
-                            {
-                                type: "textarea",
-                                label: "Mensaje:",
-                                name: "message",
-                                required: true,
-                                placeholder: "Cuéntame en qué puedo ayudarte"
-                            },
-                            { 
-                                type: "text",
-                                name: "name",
-                                label: "Nombre:",
-                                placeholder: "Tu nombre"
-                            },
-                            { type: "submit" }      
-                        ],
-                        styles: {
-                            title: {
-                                backgroundColor: "var(--primary)"
-                            },
-                            button: {
-                                backgroundColor: "var(--primary)"
-                            }
-                        }
+                            theme: "classic",
+                            buttonImg: "<i class='fas fa-comment' style='font-size:24px'/>"
+                        });
                     });
                 </script>
             </div>

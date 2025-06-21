@@ -370,17 +370,36 @@ p {
 }
 
 /* Theme Toggle */
-.theme-toggle {
+.theme-toggle, .language-toggle {
     background: none;
     border: none;
     color: var(--text);
     font-size: 1.25rem;
     cursor: pointer;
     padding: 0.5rem;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    margin: 0 0.25rem;
+}
+
+.language-toggle {
+    position: relative;
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.language-toggle i {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.language-toggle span {
+    font-size: 0.7rem;
+    font-weight: 600;
 }
 
 .theme-toggle:hover {
@@ -1338,53 +1357,57 @@ p {
 }
 
 /* Services Section */
-.services-section {
-    margin-top: 4rem;
-    padding: 2rem 0;
+/* Services Section */
+.services-page {
+    padding: 5rem 0;
+    background-color: var(--bg);
+}
+.de{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.services-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .service-card {
     background: var(--card-bg);
     border-radius: 0.5rem;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     border: 1px solid var(--border);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--primary);
 }
 
-#formbutton-button{
- display: none !important;    
-}
-
 .service-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
     color: var(--primary);
     font-size: 1.75rem;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .service-card:hover .service-icon {
@@ -1397,6 +1420,7 @@ p {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: var(--text);
+    font-weight: 600;
 }
 
 .service-card p {
