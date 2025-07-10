@@ -2,7 +2,45 @@
 const state = {
     currentPage: 'home',
     theme: 'light',
-    language: 'es' // 'es' para español, 'en' para inglés
+    language: 'es', // 'es' para español, 'en' para inglés
+    projects: [
+        {
+            id: 1,
+            title: 'Pizza Palace',
+            description: 'project2Desc1',
+            image: 'images/250618_17h18m02s_screenshot.png',
+            demoUrl: 'https://pizza-gamma-virid.vercel.app/',
+            codeUrl: '#',
+            tags: ['React', 'Next.js', 'E-commerce']
+        },
+        {
+            id: 2,
+            title: 'project2Title',
+            description: 'project2Desc2',
+            image: 'images/250615_16h36m43s_screenshot.png',
+            demoUrl: 'https://caracas-flight-servicess.netlify.app/',
+            codeUrl: 'https://github.com/bertv07/Caracas-Flight-Services',
+            tags: ['React', 'Node.js', 'Sistema de Gestión']
+        },
+        {
+            id: 3,
+            title: 'project3Title',
+            description: 'project3Desc3',
+            image: 'images/250623_18h07m02s_screenshot.png',
+            demoUrl: 'https://canserberooo.netlify.app/',
+            codeUrl: 'https://github.com/gleybert/portfolio',
+            tags: ['HTML', 'CSS', 'JavaScript']
+        },
+        {
+            id: 4,
+            title: 'Demonias Boots',
+            description: 'project4Desc',
+            image: 'images/250710_13h59m25s_screenshot.png',
+            demoUrl: 'https://demonias.netlify.app/',
+            codeUrl: '#',
+            tags: ['Three.js', '3D', 'WebGL', 'Animación']
+        }
+    ]
 };
 
 // Translations
@@ -42,6 +80,8 @@ const translations = {
         project3Title: 'Canserbero',
         project3Desc: 'Sitio web tributo al artista venezolano',
         project3Desc3: 'Sitio web tributo al artista venezolano Canserbero, desarrollado con HTML, CSS y JavaScript.',
+        project4Title: 'Demonias Boots',
+        project4Desc: 'Experiencia interactiva 3D con Three.js mostrando un modelo 3D de botas Demonias. Incluye controles para rotar, hacer zoom y panear la cámara.',
         // About
         aboutMe: 'Sobre Mí',
         aboutDescription: 'Desarrollador Full-stack con experiencia en la creación de soluciones web modernas y eficientes. Apasionado por el desarrollo de software y siempre en busca de nuevos desafíos.',
@@ -130,6 +170,8 @@ const translations = {
         project3Title: 'Canserbero',
         project3Desc: 'Tribute website to the Venezuelan artist',
         project3Desc3: 'Tribute website to the Venezuelan artist Canserbero, developed with HTML, CSS, and JavaScript.',
+        project4Title: 'Demonias Boots',
+        project4Desc: 'Interactive 3D experience with Three.js showcasing a 3D model of Demonias boots. Includes controls for rotating, zooming, and panning the camera.',
         // About
         aboutMe: 'About Me',
         aboutDescription: 'Full Stack Developer with experience in creating modern and efficient web solutions. Passionate about software development and always looking for new challenges.',
@@ -249,6 +291,7 @@ function init() {
     // Translate the page
     translatePage(state.language);
 }
+
 
 // Set up event listeners
 function setupEventListeners() {
@@ -414,6 +457,14 @@ function renderPage(page) {
                 
                 // Force a reflow to ensure all elements are in the DOM
                 void app.offsetHeight;
+                
+                // If we're on the home page, render featured projects
+                if (page === 'home') {
+                    // Small delay to ensure DOM is fully rendered
+                    setTimeout(() => {
+                        renderFeaturedProjects();
+                    }, 100);
+                }
                 
                 // Apply translations again to catch any dynamic content
                 setTimeout(() => translatePage(state.language), 50);
@@ -595,6 +646,38 @@ function translatePage(lang) {
         console.error('Error updating language toggle:', error);
     }
     
+    // Actualizar los botones de los proyectos destacados
+    const viewDemoButtons = document.querySelectorAll('.project-links [data-translate="viewDemo"]');
+    const viewCodeButtons = document.querySelectorAll('.project-links [data-translate="viewCode"]');
+    
+    viewDemoButtons.forEach(button => {
+        button.textContent = lang === 'es' ? 'Ver Demo' : 'View Demo';
+    });
+    
+    viewCodeButtons.forEach(button => {
+        button.textContent = lang === 'es' ? 'Código' : 'Code';
+    });
+    
+    // Actualizar los títulos y descripciones de los proyectos
+    const projectElements = document.querySelectorAll('.project-details');
+    projectElements.forEach(projectEl => {
+        const titleEl = projectEl.querySelector('h3');
+        const descEl = projectEl.querySelector('p');
+        
+        if (titleEl && descEl) {
+            const titleKey = titleEl.getAttribute('data-translate');
+            const descKey = descEl.getAttribute('data-translate');
+            
+            if (titleKey && translations[lang] && translations[lang][titleKey]) {
+                titleEl.textContent = translations[lang][titleKey];
+            }
+            
+            if (descKey && translations[lang] && translations[lang][descKey]) {
+                descEl.textContent = translations[lang][descKey];
+            }
+        }
+    });
+    
     console.log('Translation complete');
 }
 
@@ -609,10 +692,11 @@ function handleFormSubmit(e) {
     
     // Show loading state
     submitButton.disabled = true;
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+        (state.language === 'es' ? 'Enviando...' : 'Sending...');
     
     // Show success message immediately before form submission
-    formStatus.textContent = 'Enviando mensaje...';
+    formStatus.textContent = state.language === 'es' ? 'Enviando mensaje...' : 'Sending message...';
     formStatus.style.backgroundColor = '#e2f3fd';
     formStatus.style.color = '#0c5460';
     formStatus.style.display = 'block';
@@ -623,7 +707,9 @@ function handleFormSubmit(e) {
     // Submit the form after a short delay to allow the message to show
     setTimeout(() => {
         // Show success message
-        formStatus.textContent = '¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.';
+        formStatus.textContent = state.language === 'es' 
+            ? '¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.'
+            : 'Message sent successfully! I will get back to you soon.';
         formStatus.style.backgroundColor = '#d4edda';
         formStatus.style.color = '#155724';
         
@@ -641,6 +727,7 @@ function handleFormSubmit(e) {
         }, 100);
     }, 1000);
 }
+
 
 // Handle browser back/forward buttons
 window.addEventListener('popstate', (event) => {
@@ -665,6 +752,61 @@ window.addEventListener('popstate', (event) => {
         translatePage(state.language);
     }
 });
+
+// Función para obtener proyectos aleatorios únicos
+function getRandomProjects(count) {
+    // Hacer una copia del array de proyectos
+    const shuffled = [...state.projects];
+    
+    // Algoritmo Fisher-Yates para mezclar el array
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // Tomar los primeros 'count' elementos
+    return shuffled.slice(0, count);
+}
+
+// Función para renderizar proyectos destacados
+function renderFeaturedProjects() {
+    const featuredContainer = document.querySelector('.projects-preview');
+    if (!featuredContainer) return;
+    
+    // Obtener 3 proyectos aleatorios (o menos si no hay suficientes)
+    const randomProjects = getRandomProjects(Math.min(3, state.projects.length));
+    
+    // Generar el HTML de los proyectos
+    const projectsHTML = randomProjects.map(project => `
+        <div class="project-preview">
+            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <div class="project-details">
+                <h3 data-translate="${project.title}">${project.title}</h3>
+                <p data-translate="${project.description}">${translations[state.language][project.description] || ''}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    <a href="${project.demoUrl}" class="btn small" target="_blank" data-translate="viewDemo">
+                        ${state.language === 'es' ? 'Ver Demo' : 'View Demo'}
+                    </a>
+                    ${project.codeUrl !== '#' ? 
+                        `<a href="${project.codeUrl}" class="btn outline small" target="_blank" data-translate="viewCode">
+                            ${state.language === 'es' ? 'Código' : 'Code'}
+                        </a>` : 
+                        ''
+                    }
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    // Actualizar el contenido
+    featuredContainer.innerHTML = projectsHTML;
+    
+    // Asegurarse de que las traducciones se apliquen
+    translatePage(state.language);
+}
 
 // Add animation on scroll
 function animateOnScroll() {
@@ -721,10 +863,32 @@ if (document.readyState === 'loading') {
         initAnimations();
         // Add scroll event listener for animations
         window.addEventListener('scroll', animateOnScroll);
+        
+        // Render featured projects after a short delay to ensure the DOM is ready
+        setTimeout(() => {
+            renderFeaturedProjects();
+        }, 100);
+        
+        // Add form submit handler
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleFormSubmit);
+        }
     });
 } else {
     init();
     initAnimations();
     // Add scroll event listener for animations
     window.addEventListener('scroll', animateOnScroll);
+    
+    // Render featured projects after a short delay to ensure the DOM is ready
+    setTimeout(() => {
+        renderFeaturedProjects();
+    }, 100);
+    
+    // Add form submit handler
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
 }
