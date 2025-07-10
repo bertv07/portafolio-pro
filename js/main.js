@@ -480,6 +480,10 @@ function renderPage(page) {
 // Initialize page-specific functionality
 function initPage(page) {
     switch (page) {
+        case 'home':
+            // Initialize home page functionality
+            renderFeaturedProjects();
+            break;
         case 'skills':
             // Initialize skills tabs
             const firstTab = document.querySelector('.tab-btn');
